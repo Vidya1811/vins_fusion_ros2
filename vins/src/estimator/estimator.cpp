@@ -1168,7 +1168,7 @@ void Estimator::optimization()
 
     if (USE_GPU_CERES)
         // std::cout << "1" << endl;
-        options.dense_linear_algebra_library_type = ceres::CUDA;
+        options.dense_linear_algebra_library_type = ceres::EIGEN;
     else
         // std::cout << "2" << endl;
         options.linear_solver_type = ceres::DENSE_SCHUR;

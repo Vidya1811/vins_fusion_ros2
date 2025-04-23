@@ -82,22 +82,15 @@ void CameraPoseVisualization::add_edge(const Eigen::Vector3d& p0, const Eigen::V
 }
 
 void CameraPoseVisualization::add_loopedge(const Eigen::Vector3d& p0, const Eigen::Vector3d& p1){
-    //m_markers.clear();
     visualization_msgs::msg::Marker marker;
 
     marker.ns = m_marker_ns;
     marker.id = m_markers.size() + 1;
-    //tmp_loop_edge_num++;
-    //if(tmp_loop_edge_num >= LOOP_EDGE_NUM)
-    //  tmp_loop_edge_num = 1;
     marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
     marker.action = visualization_msgs::msg::Marker::ADD;
-    marker.lifetime = rclcpp::Duration(0);
-    //marker.scale.x = 0.4;
+    marker.lifetime = rclcpp::Duration::from_seconds(1.0);  
     marker.scale.x = 0.02;
     marker.color.r = 1.0f;
-    //marker.color.g = 1.0f;
-    //marker.color.b = 1.0f;
     marker.color.a = 1.0;
 
     geometry_msgs::msg::Point point0, point1;
@@ -110,6 +103,7 @@ void CameraPoseVisualization::add_loopedge(const Eigen::Vector3d& p0, const Eige
 
     m_markers.push_back(marker);
 }
+
 
 
 void CameraPoseVisualization::add_pose(const Eigen::Vector3d& p, const Eigen::Quaterniond& q) {
