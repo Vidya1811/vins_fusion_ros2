@@ -13,7 +13,6 @@ My contributions include:
 - Adapting the code for ROS2 Humble on Ubuntu 22.04
 - Evaluation using the EuRoC dataset
 - Generating visualizations with RViz2
-- Writing MATLAB scripts for odometry analysis and performance comparison
 
 This fork is for **educational and research** purposes only.
 
