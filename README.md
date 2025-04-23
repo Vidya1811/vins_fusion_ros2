@@ -4,7 +4,7 @@
 
 ---
 
-### ⚠️ Project Note (Course-Based Fork)
+### Project Note (Course-Based Fork)
 
 This repository is **forked and adapted from** the original [VINS-Fusion-ROS2 repository by zinuok](https://github.com/zinuok/VINS-Fusion-ROS2).  
 It was modified as part of a course project for **EECE 5554: Robotics Sensing and Navigation** at **Northeastern University**.
